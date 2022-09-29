@@ -3,11 +3,13 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../styles/Login.css";
 
-function Login() {
+function Login({isLoggedIn, setLogin}) {
   const [show, setShow] = useState(false);
+  
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -41,7 +43,7 @@ function Login() {
                     placeholder="Enter password"
                   />
                 </div>
-                <div className="d-grid gap-2 mt-3">
+                {/* <div className="d-grid gap-2 mt-3">
                   <button
                     id="modal-login"
                     type="submit"
@@ -49,10 +51,29 @@ function Login() {
                   >
                     Login
                   </button>
-                </div>
-                <p className="forgot-password text-right mt-2">
-                  Register <a href="#">here</a>
+                </div> */}
+                <div>
+                <p className="forgot-password text-right mt-2 text-center">
+                  No Account? Sign up <a href="#">here</a>
                 </p>
+                
+                </div>
+
+                <div className="d-grid gap-2 mt-3">
+                  <button className="loginButton" onClick={(e) => {
+                    e.preventDefault();
+                    setLogin(true);
+                    handleClose();
+                  }}>Login</button>
+                  {/* <button
+                    id="modal-login"
+                    type="submit"
+                    className="btn btn-success"
+                  >
+                    Login
+                  </button> */}
+                </div>
+
               </div>
             </form>
           </div>
