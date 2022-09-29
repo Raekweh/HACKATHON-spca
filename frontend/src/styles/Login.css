@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "gotham";
+  src: url("../fonts/Gotham\ Bold/Gotham Bold.otf");
+}
+
+/* I had to use id to override bootstrap */
+#login-button {
+  background-color: #47bfaf;
+  font-family: gotham;
+  font-size: 1rem;
+  border: none;
+  
+}
+
+#modal-container {
+  top: 20%;
+}
+
+.modal-content{
+  background-color:#031e45!important;
+  font-family:gotham!important;
+  color:white!important;
+}
+
+.loginButton{
+  background-color: #47bfaf;
+  font-family: gotham;
+  font-size: 1rem;
+  border: none;
+  height:6vh;
+  border-radius:12px;
+  color:white;
+  font-family:gotham;
+}
+
+.loginButton:active{
+  transform: translateY(8px);
+ 
+}
+
+.forgot-password > a{
+  color: #47bfaf;
+}
+.btn-close{
+  background-color:white!important;
+}
+
+
