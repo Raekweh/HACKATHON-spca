@@ -2,8 +2,10 @@
   "name": "hackathon",
   "version": "1.0.0",
   "description": "��#\u0000 \u0000s\u0000c\u0000p\u0000a\u0000\r\u0000 \u0000",
-  "main": "app.js",
+  "main": "backend/app.js",
   "scripts": {
+    "start":"node app.js",
+    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
