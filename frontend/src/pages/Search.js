@@ -17,6 +17,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const searchRef = useRef();
 
+// fetch clinic data from backend
   const getAllClinics = () => {
     axios.get(`${url}`)
       .then((response) => {
@@ -33,7 +34,7 @@ const Search = () => {
 
 
   const search = (data) => {
-
+    //filtering data based on search query
     const filtered = data.filter((clinic) =>
       clinic.address.toLowerCase().includes(query) ||
       clinic.name.toLowerCase().includes(query) ||
@@ -49,17 +50,11 @@ const Search = () => {
   }
 
 
-  const handleScroll = (elementRef) => {
-    window.scrollTo({
-      top: elementRef.current,
-      behavior: "smooth",
-    });
-  };
 
 
   return (
     <div >
-      <button className='scrollBtn' onClick={() => handleScroll(searchRef)}>Back To Search</button>
+      
 
       <div>
         <p className={'searchTitle ' + ((search(clinics).length > 0 ? 'translate' : ''))}>
@@ -75,6 +70,7 @@ const Search = () => {
 
 
       <div>
+        {/* populating page with individual clinics based on filtered results */}
         <Grid container sx={{ gridRowGap: '6vh', }}>
           {search(clinics).map((clinic) => {
             return <Grid items md={3}><Card2 data={clinic} /></Grid>
