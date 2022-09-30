@@ -9,40 +9,69 @@
   font-family: gotham;
   font-size: 1rem;
   border: none;
-  
 }
 
 #modal-container {
   top: 20%;
 }
 
-.modal-content{
-  background-color:#031e45!important;
-  font-family:gotham!important;
-  color:white!important;
+.modal-content {
+  background-color: #031e45 !important;
+  font-family: gotham !important;
+  color: white !important;
 }
 
-.loginButton{
+.loginButton {
   background-color: #47bfaf;
   font-family: gotham;
   font-size: 1rem;
   border: none;
-  height:6vh;
-  border-radius:12px;
-  color:white;
-  font-family:gotham;
+  height: 6vh;
+  border-radius: 12px;
+  color: white;
+  font-family: gotham;
 }
 
-.loginButton:active{
+.loginButton:active {
   transform: translateY(8px);
- 
 }
 
-.forgot-password > a{
+.registerButton {
+  background-color: #47bfaf;
+  font-family: gotham;
+  font-size: 1rem;
+  border: none;
+  height: 6vh;
+  border-radius: 12px;
+  color: white;
+  font-family: gotham;
+}
+
+.registerButton:active {
+  transform: translateY(8px);
+}
+
+.forgot-password > a {
   color: #47bfaf;
 }
-.btn-close{
-  background-color:white!important;
+.btn-close {
+  background-color: white !important;
 }
 
+.register-link {
+  padding-left: 5px;
+  cursor: pointer;
+}
 
+.login-close-btn {
+  background-color: rgba(204, 204, 204, 0.432);
+  width: 1.7em;
+  height: 1.7em;
+  transition: 0.2s;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.login-close-btn:hover {
+  background-color: white;
+}
