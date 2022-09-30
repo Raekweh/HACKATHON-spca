@@ -11,4 +11,4 @@ const LoginSchema = new mongoose.Schema({
     },
 })
 
-module.exports = Login = mongoose.model('User Accounts', LoginSchema);
+module.exports = Login = mongoose.model('users', LoginSchema);
