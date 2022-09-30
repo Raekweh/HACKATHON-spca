@@ -12,23 +12,19 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Search from "./pages/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {useState} from 'react';
+import { useState } from "react";
 
-import "./App.css"; 
+import "./App.css";
+import BurgerMenu from "./components/BurgerMenu";
 
 function App() {
-  const [isLoggedIn,setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   console.log(isLoggedIn);
-  
+
   return (
     <div>
-      
-      
-      
-    
-      
-
-      <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn}   />
+      <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
+      <BurgerMenu />
 
       <Routes>
         <Route path="/" element={<Home />} />

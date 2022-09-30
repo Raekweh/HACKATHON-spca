@@ -22,7 +22,7 @@ function Login({ isLoggedIn, setLogin }) {
   };
 
   const handleRegClose = () => setRegShow(false);
-  const handleRegShow = () => setRegShow(true);
+  // const handleRegShow = () => setRegShow(true);
 
   return (
     <>
