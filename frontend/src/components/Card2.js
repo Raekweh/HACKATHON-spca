@@ -13,10 +13,13 @@ const Card2 = (data) => {
 
       <div className="card-body">
         <p>
-          {data.data.suburb}, {data.data.location}
+          {data.data.suburb}
         </p>
-        <p>{data.data.hours}</p>
-        <p>{data.data.website}</p>
+        <p>{data.data.phoneNumber}</p>
+        <p>{data.data.openingHours}</p>
+        <p>{data.data.url}</p>
+
+
       </div>
       <div className="card-btn">
         <button type="button">Contact Us</button>
