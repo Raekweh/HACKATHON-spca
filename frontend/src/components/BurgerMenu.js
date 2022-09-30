@@ -31,27 +31,15 @@ export default function BurgerMenu({ loggedIn, setLogin }) {
           }
         >
           <div>
-            <Link to="/">
-              <a onClick={handleToggle}>Home</a>
-              {/* <button onClick={handleToggle}>Home</button> */}
-            </Link>
-          </div>
-          <div>
             <Link to="/search">
-              <a onClick={handleToggle}>Search</a>
+              <a onClick={handleToggle}>Find Clinic</a>
               {/* <button onClick={handleToggle}>Search</button> */}
             </Link>
           </div>
           <div>
-            <Link to="/">
-              <a onClick={handleToggle}>Message</a>
+            <Link to="/chatbox">
+              <a onClick={handleToggle}>Messages</a>
               {/* <button onClick={handleToggle}>Message</button> */}
-            </Link>
-          </div>
-          <div>
-            <Link to="/">
-              <a onClick={handleToggle}>Prescription</a>
-              {/* <button onClick={handleToggle}>Prescription</button> */}
             </Link>
           </div>
           <div>
