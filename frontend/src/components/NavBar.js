@@ -6,6 +6,7 @@ import {
 import { Link } from "react-router-dom";
 import React from "react";
 import Login from "./Login";
+
 import BurgerMenu from "./BurgerMenu";
 
 const NavBar = ({ loggedIn, setLogin }) => {
