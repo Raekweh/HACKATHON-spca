@@ -12,17 +12,17 @@ import React from "react";
 import Login from "./Login";
 import Register from "./Register";
 
-const NavBar = ({isLoggedIn,setLogin}) => {
+const NavBar = ({ isLoggedIn, setLogin }) => {
   return (
     <div>
       <AppBar position="relative">
         <Toolbar className="navBar">
-          <Typography variant="h4">
+          <Typography className="navBar-title-container" variant="h4">
             <Link to="/" className="title">
               PetStop
             </Link>
           </Typography>
-          <Login isLoggedIn={isLoggedIn} setLogin={setLogin}/>
+          <Login isLoggedIn={isLoggedIn} setLogin={setLogin} />
           {/* <Button id="login-button" variant="primary" >
         Sign In
       </Button> */}
