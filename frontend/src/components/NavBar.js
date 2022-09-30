@@ -12,7 +12,7 @@ import React from "react";
 import Login from "./Login";
 import Register from "./Register";
 
-const NavBar = ({ isLoggedIn, setLogin }) => {
+const NavBar = ({ loggedIn, setLogin }) => {
   return (
     <div>
       <AppBar position="relative">
@@ -22,7 +22,7 @@ const NavBar = ({ isLoggedIn, setLogin }) => {
               PetStop
             </Link>
           </Typography>
-          <Login isLoggedIn={isLoggedIn} setLogin={setLogin} />
+          <Login isLoggedIn={loggedIn} setLogin={setLogin} />
           {/* <Button id="login-button" variant="primary" >
         Sign In
       </Button> */}

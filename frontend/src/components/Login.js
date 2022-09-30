@@ -24,150 +24,152 @@ function Login({ isLoggedIn, setLogin }) {
   const handleRegClose = () => setRegShow(false);
   // const handleRegShow = () => setRegShow(true);
 
-  return (
-    <>
-      <Button id="login-button" variant="primary" onClick={handleShow}>
-        Sign In
-      </Button>
+  if (!isLoggedIn) {
+    return (
+      <>
+        <Button id="login-button" variant="primary" onClick={handleShow}>
+          Sign In
+        </Button>
 
-      <Modal id="modal-container" show={regShow} onHide={handleRegClose}>
-        <Modal.Header>
-          <Modal.Title>
-            <h3 className="Auth-form-title">Register</h3>
-          </Modal.Title>
-          <button className="login-close-btn" onClick={regAndLogClose}>
-            X
-          </button>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="Auth-form-container">
-            <form className="Auth-form">
-              <div className="Auth-form-content">
-                <div className="form-group mt-3">
-                  <label>First name</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="Enter first name"
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Last name</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="Enter first name"
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Email address</label>
-                  <input
-                    type="email"
-                    className="form-control mt-1"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Phone</label>
-                  <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="Enter phone number"
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    className="form-control mt-1"
-                    placeholder="Enter password"
-                  />
-                </div>
+        <Modal id="modal-container" show={regShow} onHide={handleRegClose}>
+          <Modal.Header>
+            <Modal.Title>
+              <h3 className="Auth-form-title">Register</h3>
+            </Modal.Title>
+            <button className="login-close-btn" onClick={regAndLogClose}>
+              X
+            </button>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="Auth-form-container">
+              <form className="Auth-form">
+                <div className="Auth-form-content">
+                  <div className="form-group mt-3">
+                    <label>First name</label>
+                    <input
+                      type="text"
+                      className="form-control mt-1"
+                      placeholder="Enter first name"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Last name</label>
+                    <input
+                      type="text"
+                      className="form-control mt-1"
+                      placeholder="Enter first name"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Email address</label>
+                    <input
+                      type="email"
+                      className="form-control mt-1"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Phone</label>
+                    <input
+                      type="text"
+                      className="form-control mt-1"
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Password</label>
+                    <input
+                      type="password"
+                      className="form-control mt-1"
+                      placeholder="Enter password"
+                    />
+                  </div>
 
-                <div>
-                  <p className="forgot-password text-right mt-2 text-center">
-                    Already registered? Login
-                    <a className="register-link" onClick={handleShow}>
-                      here
-                    </a>
-                  </p>
-                </div>
-                <div className="d-grid gap-2 mt-3">
-                  <button
-                    className="registerButton"
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                  >
-                    Register
-                  </button>
-                </div>
+                  <div>
+                    <p className="forgot-password text-right mt-2 text-center">
+                      Already registered? Login
+                      <a className="register-link" onClick={handleShow}>
+                        here
+                      </a>
+                    </p>
+                  </div>
+                  <div className="d-grid gap-2 mt-3">
+                    <button
+                      className="registerButton"
+                      onClick={(e) => {
+                        e.preventDefault();
+                      }}
+                    >
+                      Register
+                    </button>
+                  </div>
 
-                <div className="d-grid gap-2 mt-3"></div>
-              </div>
-            </form>
-          </div>
-        </Modal.Body>
-      </Modal>
+                  <div className="d-grid gap-2 mt-3"></div>
+                </div>
+              </form>
+            </div>
+          </Modal.Body>
+        </Modal>
 
-      <Modal id="modal-container" show={show} onHide={handleClose}>
-        <Modal.Header>
-          <Modal.Title>
-            <h3 className="Auth-form-title">Log In</h3>
-          </Modal.Title>
-          <button className="login-close-btn" onClick={regAndLogClose}>
-            X
-          </button>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="Auth-form-container">
-            <form className="Auth-form">
-              <div className="Auth-form-content">
-                <div className="form-group mt-3">
-                  <label>Email address</label>
-                  <input
-                    type="email"
-                    className="form-control mt-1"
-                    placeholder="Enter email"
-                  />
-                </div>
-                <div className="form-group mt-3">
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    className="form-control mt-1"
-                    placeholder="Enter password"
-                  />
-                </div>
-                <div>
-                  <p className="forgot-password text-right mt-2 text-center">
-                    No Account? Sign up
-                    <a className="register-link" onClick={handleClose}>
-                      here
-                    </a>
-                  </p>
-                </div>
+        <Modal id="modal-container" show={show} onHide={handleClose}>
+          <Modal.Header>
+            <Modal.Title>
+              <h3 className="Auth-form-title">Log In</h3>
+            </Modal.Title>
+            <button className="login-close-btn" onClick={regAndLogClose}>
+              X
+            </button>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="Auth-form-container">
+              <form className="Auth-form">
+                <div className="Auth-form-content">
+                  <div className="form-group mt-3">
+                    <label>Email address</label>
+                    <input
+                      type="email"
+                      className="form-control mt-1"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Password</label>
+                    <input
+                      type="password"
+                      className="form-control mt-1"
+                      placeholder="Enter password"
+                    />
+                  </div>
+                  <div>
+                    <p className="forgot-password text-right mt-2 text-center">
+                      No Account? Sign up
+                      <a className="register-link" onClick={handleClose}>
+                        here
+                      </a>
+                    </p>
+                  </div>
 
-                <div className="d-grid gap-2 mt-3">
-                  <button
-                    className="loginButton"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setLogin(true);
-                      handleClose();
-                      handleRegClose();
-                    }}
-                  >
-                    Login
-                  </button>
+                  <div className="d-grid gap-2 mt-3">
+                    <button
+                      className="loginButton"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setLogin(true);
+                        handleClose();
+                        handleRegClose();
+                      }}
+                    >
+                      Login
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </div>
-        </Modal.Body>
-      </Modal>
-    </>
-  );
+              </form>
+            </div>
+          </Modal.Body>
+        </Modal>
+      </>
+    );
+  }
 }
 
 export default Login;

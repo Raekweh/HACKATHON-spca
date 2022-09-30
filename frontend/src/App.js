@@ -24,7 +24,8 @@ function App() {
   return (
     <div>
       <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
-      <BurgerMenu />
+
+      <BurgerMenu loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
 
       <Routes>
         <Route path="/" element={<Home />} />
