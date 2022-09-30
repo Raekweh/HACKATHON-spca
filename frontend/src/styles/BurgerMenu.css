@@ -55,3 +55,9 @@ burger-menu-outer-container {
 .burger-menu-outer-container button:active {
   transform: translateY(8px);
 }
+
+.burger-menu-outer-container a {
+  color: #47bfaf;
+  font-family: gotham;
+  font-size: 1.5rem;
+}

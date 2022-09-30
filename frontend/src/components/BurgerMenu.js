@@ -32,34 +32,46 @@ export default function BurgerMenu({ loggedIn, setLogin }) {
         >
           <div>
             <Link to="/">
-              <button onClick={handleToggle}>Home</button>
+              <a onClick={handleToggle}>Home</a>
+              {/* <button onClick={handleToggle}>Home</button> */}
             </Link>
           </div>
           <div>
             <Link to="/search">
-              <button onClick={handleToggle}>Search</button>
+              <a onClick={handleToggle}>Search</a>
+              {/* <button onClick={handleToggle}>Search</button> */}
             </Link>
           </div>
           <div>
             <Link to="/">
-              <button onClick={handleToggle}>Message</button>
+              <a onClick={handleToggle}>Message</a>
+              {/* <button onClick={handleToggle}>Message</button> */}
             </Link>
           </div>
           <div>
             <Link to="/">
-              <button onClick={handleToggle}>Prescription</button>
+              <a onClick={handleToggle}>Prescription</a>
+              {/* <button onClick={handleToggle}>Prescription</button> */}
             </Link>
           </div>
           <div>
             <Link to="/">
-              <button
+              <a
                 onClick={(e) => {
                   setLoginFalse();
                   handleToggle();
                 }}
               >
                 Logout
-              </button>
+              </a>
+              {/* <button
+                onClick={(e) => {
+                  setLoginFalse();
+                  handleToggle();
+                }}
+              >
+                Logout
+              </button> */}
             </Link>
           </div>
         </div>
