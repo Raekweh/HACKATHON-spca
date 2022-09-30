@@ -5,11 +5,15 @@ const ClinicSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  region: {
+  imageURL: {
     type: String,
-    required: true
+    required: true,
   },
-  address: {
+  name: {
+    type: String,
+    required: true,
+  },
+  specialistType: {
     type: String,
     required: true
   },
@@ -17,11 +21,7 @@ const ClinicSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  phoneNumber: {
-    type: String,
-    required: true
-  },
-  openingHours: {
+  address: {
     type: String,
     required: true
   },
@@ -29,7 +29,19 @@ const ClinicSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  specialistType: {
+  region: {
+    type: String,
+    required: true
+  },
+  openingHours: {
+    type: String,
+    required: true
+  },
+  contactNumber: {
+    type: String,
+    required: true
+  },
+  websiteURL: {
     type: String,
     required: true
   }
