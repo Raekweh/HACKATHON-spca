@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb+srv://spca:easypassword@clinics.ysgccbx.mongodb.net/?retryWrites=true&w=majority"
+  }
