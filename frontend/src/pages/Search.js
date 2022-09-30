@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import TextField from "@mui/material/TextField";
+
 import Card2 from "../components/Card2";
 import { useState } from "react";
 import { Grid, Container } from "@mui/material";
@@ -38,12 +39,15 @@ const Search = () => {
       clinic.name.toLowerCase().includes(query) ||
       clinic.suburb.toLowerCase().includes(query)
     )
+
     if (query === "") {
       return [];
     }
     return filtered;
 
+
   }
+
 
   const handleScroll = (elementRef) => {
     window.scrollTo({
@@ -79,7 +83,6 @@ const Search = () => {
         </Grid>
 
       </div>
-
 
 
 

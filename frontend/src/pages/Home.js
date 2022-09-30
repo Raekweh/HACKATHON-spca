@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -10,9 +10,8 @@ import {
 } from "@mui/material";
 import "../styles/Home.css";
 
-
 const Home = () => {
-  const [loggedIn,setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div>
       <Grid container>
@@ -20,14 +19,14 @@ const Home = () => {
           <img src={"../images/dog.jpeg"} alt="doggy" className="logoImg"></img>
         </Grid>
         <Grid items md={6}>
-          <h1 className="introText">
+          <h1 id="introText" className="introText">
             Your One Stop App For All Things Pet Related
           </h1>
         </Grid>
         <Grid items md={6}>
           <div className="about-div">
             <h2 className="about-heading">About Us</h2>
-            <p className='homeText'>
+            <p id="homeText" className="homeText">
               The PetStop app was designed to help pet owners access non-urgent
               veterinary support online. After signing up, the pet owner is able
               to search for a local veterinary clinic to consult with. The pet
@@ -35,7 +34,6 @@ const Home = () => {
               their pet. A veterinary specialist is then able to reply and
               provide the next recommended course of action.
             </p>
-          
           </div>
         </Grid>
         <Grid items md={6}>

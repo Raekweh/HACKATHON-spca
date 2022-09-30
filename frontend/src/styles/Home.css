@@ -11,7 +11,7 @@
   color: #47bfaf;
   text-align: center;
   margin-bottom: 80px;
-  border-bottom:8px solid #47bfaf;
+  border-bottom: 8px solid #47bfaf;
 }
 
 .about-div {
@@ -23,4 +23,23 @@
 .about-div p {
   font-size: 1.5rem;
   text-align: justify;
+}
+
+@media (max-width: 899px) {
+  #introText {
+    width: 100vw;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-heading {
+    font-size: 2.6rem;
+  }
+  #homeText {
+    font-size: 0.9rem !important;
+  }
+  h1 {
+    font-size: 2.5rem !important;
+  }
 }
