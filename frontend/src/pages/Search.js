@@ -11,7 +11,7 @@ import axios from 'axios';
 const Search = () => {
 
   const [clinics, getClinics] = useState([]);
-  const url = "http://localhost:8082/api/clinics/getbooks";
+  const url = "http://localhost:8082/api/clinics/getclinics";
 
   const [query, setQuery] = useState("");
   const searchRef = useRef();
@@ -20,7 +20,7 @@ const Search = () => {
     axios.get(`${url}`)
       .then((response) => {
         const allClinics = response.data;
-        getClinics(allClinics)
+        getClinics(allClinics);
       })
       .catch(error => console.error(`Error: ${error}`));
   }
