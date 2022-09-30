@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState, useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../styles/Login.css";
@@ -6,6 +7,27 @@ import "../styles/Login.css";
 function Login({ isLoggedIn, setLogin }) {
   const [show, setShow] = useState(false);
   const [regShow, setRegShow] = useState(false);
+  const [user, getUser] = useState([]);
+  const [email, setEmail] = useState('');
+
+
+  const emailRef = useRef();
+
+  const loginURL = "http://localhost:8082/api/logins/getLogins";
+
+  const getAllLogins = () => {
+    axios.get(`${loginURL}`)
+      .then((response) => {
+        const user = response.data;
+        getUser(user);
+      })
+      .catch(error => console.error(`Error: ${error}`));
+  }
+
+  useEffect(() => {
+    getAllLogins();
+    console.log(user);
+  }, []);
 
   const handleClose = () => {
     setShow(false);
@@ -20,6 +42,11 @@ function Login({ isLoggedIn, setLogin }) {
     setShow(false);
     setRegShow(false);
   };
+
+  const handleChange = (event) => {
+    console.log(event);
+    setEmail(event.target.value);
+  }
 
   const handleRegClose = () => setRegShow(false);
   // const handleRegShow = () => setRegShow(true);
@@ -63,6 +90,8 @@ function Login({ isLoggedIn, setLogin }) {
                   <div className="form-group mt-3">
                     <label>Email address</label>
                     <input
+                      onChange={handleChange}
+                      value={email}
                       type="email"
                       className="form-control mt-1"
                       placeholder="Enter email"
@@ -154,9 +183,24 @@ function Login({ isLoggedIn, setLogin }) {
                       className="loginButton"
                       onClick={(e) => {
                         e.preventDefault();
-                        setLogin(true);
-                        handleClose();
-                        handleRegClose();
+                        setEmail(emailRef.current.value);
+
+                        // if (user != null) {
+
+
+                        //   user.forEach((element) => {
+                        //     // if (element['email'] == ) {
+
+                        //     // }
+                        //   });
+
+                        // }
+                        // else if (user == null) {
+                        //   console.log('null');
+
+                        // }
+
+                        console.log(email);
                       }}
                     >
                       Login
