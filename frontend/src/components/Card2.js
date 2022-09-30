@@ -5,7 +5,7 @@ const Card2 = (data) => {
   return (
     <div className="card-container">
       <div className="image-container">
-        <img src={data.data.img} alt="some img" />
+        <img src={data.data.imageURL} alt="some img" />
       </div>
       <div className="card-title">
         <h1>{data.data.name}</h1>
