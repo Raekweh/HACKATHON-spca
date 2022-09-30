@@ -20,11 +20,12 @@ body{
   color:white;
   text-decoration: none;
 
+
 }
-.links{
-  display:flex;
-  
+.title:hover{
+  color:#47bfaf;
 }
+
 
 .navBar {
   justify-content: space-between;
@@ -32,13 +33,43 @@ body{
   align-items: center;
   padding: 0 3vw !important;
   background-color:#031e45;
-
+  align-items:center;
 }
+  
 
-.links > li{
+  .links{
+    margin:auto 15% auto auto;
+  }
+
+.links  li{
   list-style-type: none;
   padding-left:4vw;
+  font-size:1.7rem;
+  font-family:gotham;
+  cursor:pointer;
+  float:left;
+  
 }
+.routes{
+  text-decoration: none;
+  color:white;
+}
+
+.routes {
+
+  text-decoration: none;
+  color:white;
+  border-bottom: 2px solid #47bfaf;
+  
+  
+}
+.routes:hover {
+  display:inline-block;
+  transform: scale(1.1);
+  color: white;
+
+}
+
 
 .logoImg{
   width:100%;
@@ -188,7 +219,7 @@ body{
   width:100%;
   font-size:2rem;
   background-color:#47bfaf;
-  color:white;
+  color:white!important;
   cursor:pointer;
   border:5px solid black;
   border-radius:10%;
@@ -198,8 +229,8 @@ body{
 }
 
 .card-btn button:hover{
-  background-color:white;
-  color:#031e45;
+  background-color: white;
+  color:#031e45!important;
 }
 
 .card-btn button:active{
@@ -226,6 +257,16 @@ body{
 .homeText{
   font-family:gotham;
   color:#031e45;
-  font-size:1.3rem!important;
+  font-size:1.5rem!important;
 }
+
+.contact{
+  color:white;
+  text-decoration: none;
+}
+
+/* .contact:hover{
+  background-color: white;
+  color:#031e45;
+} */
 

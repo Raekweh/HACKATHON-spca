@@ -3,18 +3,28 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../styles/Login.css";
 
-function Login({isLoggedIn, setLogin}) {
+
+function Login({isLoggedIn, setIsLoggedIn}) {
   const [show, setShow] = useState(false);
+
   
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  console.log(isLoggedIn);
+
 
   return (
     <>
-      <Button id="login-button" variant="primary" onClick={handleShow}>
-        Sign In
+      <Button id={("login-button")} variant="primary" onClick={() => {
+        (isLoggedIn ? setIsLoggedIn(false) : handleShow())
+        
+
+      }}
+        
+      >
+        {(isLoggedIn ? <a style={{textDecoration:'none',color:'inherit'}} href="/">Sign Out</a> : "Sign In")}
       </Button>
 
       <Modal id="modal-container" show={show} onHide={handleClose}>
@@ -62,7 +72,8 @@ function Login({isLoggedIn, setLogin}) {
                 <div className="d-grid gap-2 mt-3">
                   <button className="loginButton" onClick={(e) => {
                     e.preventDefault();
-                    setLogin(true);
+                    setIsLoggedIn(true);
+                    console.log(isLoggedIn);
                     handleClose();
                   }}>Login</button>
                   {/* <button

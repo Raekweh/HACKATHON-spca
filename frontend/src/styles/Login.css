@@ -7,13 +7,21 @@
 #login-button {
   background-color: #47bfaf;
   font-family: gotham;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: none;
   
+  
+}
+
+#login-button:active{
+  transform: translateY(12px);
 }
 
 #modal-container {
   top: 20%;
+}
+#invisible {
+  visibility: hidden!important;
 }
 
 .modal-content{
@@ -44,5 +52,7 @@
 .btn-close{
   background-color:white!important;
 }
+
+
 
 

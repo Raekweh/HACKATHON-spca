@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, Container } from "@mui/material";
-
+import { Link } from "react-router-dom";
 const Card2 = (data) => {
   return (
     <div className="card-container">
@@ -19,7 +18,7 @@ const Card2 = (data) => {
         <p>{data.data.website}</p>
       </div>
       <div className="card-btn">
-        <button type="button">Contact Us</button>
+      <Link className='contact' to={'/chatbox'}><button type="button">Contact Us</button></Link>
       </div>
     </div>
     // <div className="card">

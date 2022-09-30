@@ -13,6 +13,7 @@ import Services from "./pages/Services";
 import Search from "./pages/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {useState} from 'react';
+import Chatbox from "./pages/Chatbox";
 
 import "./App.css"; 
 
@@ -23,17 +24,13 @@ function App() {
   return (
     <div>
       
-      
-      
-    
-      
-
-      <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn}   />
+      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}   />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="search" element={<Search />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/chatbox" element={<Chatbox />} />
       </Routes>
     </div>
   );

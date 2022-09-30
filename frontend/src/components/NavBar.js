@@ -1,18 +1,14 @@
 import {
-  Box,
   Typography,
   AppBar,
   Toolbar,
-  Container,
-  Grid,
-  Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react";
 import Login from "./Login";
-import Register from "./Register";
 
-const NavBar = ({isLoggedIn,setLogin}) => {
+const NavBar = ({isLoggedIn,setIsLoggedIn}) => {
+  console.log(isLoggedIn);
   return (
     <div>
       <AppBar position="relative">
@@ -22,31 +18,21 @@ const NavBar = ({isLoggedIn,setLogin}) => {
               PetStop
             </Link>
           </Typography>
-          <Login isLoggedIn={isLoggedIn} setLogin={setLogin}/>
-          {/* <Button id="login-button" variant="primary" >
-        Sign In
-      </Button> */}
-
-          {/* <Button
-            variant="contained"
-            className="btn"
-            sx={{
-              backgroundColor: "#47bfaf",
-              fontFamily: "gotham",
-            }}
-          >
-            Log In
-          </Button> */}
+          {isLoggedIn ? <ul className="links">
+            <li><Link className='routes' to={'/search'}>Find Clinic</Link></li>
+            <li><Link className='routes' to={'/chatbox'}>Messages</Link></li>
+          </ul>
+          :
+          ''
+}
+          <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+    
           <img
             src={"../images/navbarImg.jpeg"}
             alt="rabbit"
             className="titleImg"
           ></img>
-          <ul className="links">
-            {/* <li><Link to='/services'>Link1</Link></li>
-        <li>link2</li>
-        <li>link3</li> */}
-          </ul>
+          
         </Toolbar>
       </AppBar>
     </div>
