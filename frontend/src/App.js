@@ -6,6 +6,7 @@ import {
   Container,
   Grid,
 } from "@mui/material";
+
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -16,6 +17,7 @@ import { useState } from "react";
 
 import "./App.css";
 import BurgerMenu from "./components/BurgerMenu";
+import Chatbox from "./pages/Chatbox";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,7 +32,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="search" element={<Search />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/chatbox" element={<Chatbox />} />
       </Routes>
     </div>
   );
