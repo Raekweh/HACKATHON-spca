@@ -1,11 +1,4 @@
-import {
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  Container,
-  Grid,
-} from "@mui/material";
+
 
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
@@ -16,7 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
 import "./App.css";
-import BurgerMenu from "./components/BurgerMenu";
 import Chatbox from "./pages/Chatbox";
 
 function App() {
@@ -27,7 +19,7 @@ function App() {
     <div>
       <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
 
-      <BurgerMenu loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
+      {/* <BurgerMenu loggedIn={isLoggedIn} setLogin={setIsLoggedIn} /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />

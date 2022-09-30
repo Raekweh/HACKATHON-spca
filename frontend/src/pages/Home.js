@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React, {} from "react";
 import {
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  Container,
   Grid,
-  Button,
+  
 } from "@mui/material";
 import "../styles/Home.css";
 
 const Home = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div>
       <Grid container>
@@ -23,7 +17,7 @@ const Home = () => {
             Your One Stop App For All Things Pet Related
           </h1>
         </Grid>
-        <Grid items md={6}>
+        <Grid items md={6} className='mobileAbout' order={{xs:4, md:3}}>
           <div className="about-div">
             <h2 className="about-heading">About Us</h2>
             <p id="homeText" className="homeText">
@@ -36,7 +30,7 @@ const Home = () => {
             </p>
           </div>
         </Grid>
-        <Grid items md={6}>
+        <Grid items md={6} className='mobileAboutImg' order={{xs:3, md:4}}>
           <img
             src={"../images/turtle.jpeg"}
             alt="doggy"

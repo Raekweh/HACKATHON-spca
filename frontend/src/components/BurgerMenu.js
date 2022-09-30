@@ -1,7 +1,7 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/BurgerMenu.css";
 import { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 export default function BurgerMenu({ loggedIn, setLogin }) {
   const [menuDisplay, setMenuDisplay] = useState(false);

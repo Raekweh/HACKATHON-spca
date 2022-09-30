@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "../styles/Login.css";
 
+
+
 function Login({ isLoggedIn, setLogin }) {
   const [show, setShow] = useState(false);
   const [regShow, setRegShow] = useState(false);
@@ -62,6 +64,14 @@ function Login({ isLoggedIn, setLogin }) {
                   </div>
                   <div className="form-group mt-3">
                     <label>Email address</label>
+                    <input
+                      type="email"
+                      className="form-control mt-1"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div className="form-group mt-3">
+                    <label>Address</label>
                     <input
                       type="email"
                       className="form-control mt-1"

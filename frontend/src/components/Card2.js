@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid, Container } from "@mui/material";
 import {Link} from 'react-router-dom';
 
 const Card2 = (data) => {
