@@ -95,11 +95,9 @@ function Login({ isLoggedIn, setLogin }) {
                 <div className="d-grid gap-2 mt-3">
                   <button
                     className="registerButton"
-                    // onClick={(e) => {
-                    //   e.preventDefault();
-                    //   setLogin(true);
-                    //   handleClose();
-                    // }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
                   >
                     Register
                   </button>
