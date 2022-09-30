@@ -1,16 +1,12 @@
 import {
-  Box,
   Typography,
   AppBar,
   Toolbar,
-  Container,
-  Grid,
-  Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import React from "react";
 import Login from "./Login";
-import Register from "./Register";
+import BurgerMenu from "./BurgerMenu";
 
 const NavBar = ({ loggedIn, setLogin }) => {
   return (
@@ -23,6 +19,7 @@ const NavBar = ({ loggedIn, setLogin }) => {
             </Link>
           </Typography>
           <Login isLoggedIn={loggedIn} setLogin={setLogin} />
+          <BurgerMenu loggedIn={loggedIn} setLogin={setLogin} />
           {/* <Button id="login-button" variant="primary" >
         Sign In
       </Button> */}

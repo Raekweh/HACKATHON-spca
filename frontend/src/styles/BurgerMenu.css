@@ -5,13 +5,17 @@ burger-menu-outer-container {
 .burger-container {
   position: absolute;
   color: #47bfaf;
-  top: 5px;
-  right: 10px;
+  right:3vw;
+  bottom:2vh;
+  z-index:999;
+  
+
 }
 
 .menu-icon {
-  font-size: 50px !important;
+  font-size: calc(2vw + 2vh)!important;
   cursor: pointer;
+  
 }
 
 .menu-container-closed {
@@ -28,10 +32,10 @@ burger-menu-outer-container {
 }
 
 .menu-container-open {
-  height: 450px;
+  height: 40vh;
   background-color: #031e45;
   right: 0;
-  width: 250px;
+  width: calc(6vw + 14vh);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -39,6 +43,8 @@ burger-menu-outer-container {
   align-items: center;
   transition: 0.2s;
   z-index: 999;
+  margin-top:2vh;
+
 }
 
 .burger-menu-outer-container button {
@@ -51,6 +57,7 @@ burger-menu-outer-container {
   color: white;
   font-family: gotham;
   width: 120px;
+
 }
 
 .burger-menu-outer-container button:active {
@@ -60,7 +67,7 @@ burger-menu-outer-container {
 .burger-menu-outer-container a {
   color: white;
   font-family: gotham;
-  font-size: 1.5rem;
+  font-size: calc(1vw + 1vh);
   border-bottom: 2px solid #47bfaf;
   text-decoration: none;
   transition: 0.2s;

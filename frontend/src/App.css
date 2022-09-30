@@ -16,6 +16,8 @@ body {
   color: white;
   text-decoration: none;
   transition: 0.2s;
+  font-size: calc(2.5vw + 3vh)!important;
+  z-index:1000;
 }
 
 .title:hover {
@@ -93,7 +95,7 @@ body {
   width: 80%;
   height: 5vh;
   margin: auto;
-  font-size: 2.5rem;
+  font-size: calc(2vh + 2vh);
   border-color: #47bfaf;
   font-family: gotham;
   color: #031e45;
@@ -101,7 +103,7 @@ body {
 }
 
 .searchTitle {
-  font-size: 6rem;
+  font-size: calc(3vw + 5vh);
   color: #47bfaf;
   font-family: gotham;
   text-align: center;
@@ -216,25 +218,64 @@ body {
   font-size: 1.3rem !important;
 }
 
-@media (max-width: 992px) {
-  .searchTitle {
-    font-size: 4rem;
-  }
-}
+
 
 @media (max-width: 576px) {
-  .searchTitle {
-    font-size: 3rem;
+  .navbar{
+    position:fixed;
   }
+  .homeText {
+    font-family: gotham;
+    color: #031e45;
+    font-size: 24px!important;
+  }
+  
+  .titleImg {
+    visibility: hidden;
+  }
+  .title{
+    text-align:center;
+    justify-self:center;
+  }
+  
   .scrollBtn {
     font-size: 1.5rem;
   }
-  .title {
-    font-size: 1.7rem;
+
+  .navBar-title-container {
+    margin-bottom: 6px !important;
+    text-align:center;
+    position: relative;
+    
+    
+    
+  }
+
+  .scrollBtn {
+    position: fixed;
+    bottom: 60vh;
+    right: 65vw;
+    z-index: 9999;
+    font-size: calc(1.5vh + 1.5vw);
+    background-color: white;
+    color: #031e45;
+    border: 2px solid black;
+    font-family: gotham;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .titleImg {
+    visibility: hidden;
   }
   .navBar-title-container {
     margin-bottom: 6px !important;
+    text-align:center;
+    
   }
+  
+ 
 }
 .contact{
   color:white;

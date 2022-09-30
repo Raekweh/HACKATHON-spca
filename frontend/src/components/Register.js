@@ -41,6 +41,14 @@ function Register() {
                     placeholder="Last Name"
                   />
                 </div>
+                {/* <div className="form-group mt-3">
+                  <label>Phone</label>
+                  <input
+                    type="text"
+                    className="form-control mt-1"
+                    placeholder="Phone"
+                  />
+                </div> */}
                 <div className="form-group mt-3">
                   <label>Phone</label>
                   <input
