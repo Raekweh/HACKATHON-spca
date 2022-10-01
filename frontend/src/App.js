@@ -22,7 +22,7 @@ function App() {
       {/* <BurgerMenu loggedIn={isLoggedIn} setLogin={setIsLoggedIn} /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home loggedIn={isLoggedIn} />} />
         <Route path="/services" element={<Services />} />
         <Route path="/search" element={<Search />} />
         <Route path="/chatbox" element={<Chatbox />} />

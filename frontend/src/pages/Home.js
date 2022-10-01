@@ -5,7 +5,7 @@ import {
 } from "@mui/material";
 import "../styles/Home.css";
 
-const Home = () => {
+const Home = ({isLoggedIn}) => {
   return (
     <div>
       <Grid container>
@@ -16,6 +16,7 @@ const Home = () => {
           <h1 id="introText" className="introText">
             Your One Stop App For All Things Pet Related
           </h1>
+
         </Grid>
         <Grid items md={6} className='mobileAbout' order={{xs:4, md:3}}>
           <div className="about-div">

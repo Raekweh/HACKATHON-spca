@@ -7,7 +7,7 @@ router.get('/test', (req, res) => res.send('Login route testing!'));
 
 //Router retriveve clincs
 router.get('/getLogins', (req, res) => {
-    Login.findOne({ email: "pulinanguraa@gmail.com", password: "xxxxxx" })
+    Login.findOne({ email: "pulinangurala@gmail.com", password: "xxxxxx" })
         .then(login => res.json(login))
         .catch(err => res.status(404).json({ nologinfound: 'No User found' }));
 });

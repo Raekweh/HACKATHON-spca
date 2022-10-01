@@ -193,7 +193,12 @@ function Login({ isLoggedIn, setLogin }) {
                       className="loginButton"
                       onClick={(e) => {
                         e.preventDefault();
-                        setEmail(emailRef.current.value);
+                        // setEmail(emailRef.current.value);
+                        setLogin(true);
+                        handleClose();
+                        handleRegClose();
+
+
 
                         // if (user != null) {
 

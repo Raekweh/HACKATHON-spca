@@ -215,7 +215,7 @@ body {
 .homeText {
   font-family: gotham;
   color: #031e45;
-  font-size: 1.3rem !important;
+  font-size: 1.8rem !important;
 }
 
 
@@ -278,4 +278,9 @@ body {
 .contact{
   color:white;
   text-decoration: none;
+}
+
+.card-title > h1{
+  font-size:calc(1vh + 1vw);
+  font-family:gotham;
 }

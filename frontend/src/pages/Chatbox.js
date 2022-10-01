@@ -3,6 +3,7 @@ import { ChatEngine } from "react-chat-engine";
 import "../styles/Chatbox.css";
 
 const Chatbox = () => {
+  console.log('sddsd');
   return (
     <ChatEngine
       height="90vh"

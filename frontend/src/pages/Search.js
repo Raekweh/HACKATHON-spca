@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
-
-
 import Card2 from "../components/Card2";
 import { useState } from "react";
 import { Grid,} from "@mui/material";
 import { useRef } from 'react'
 import axios from 'axios';
-
-
 
 const Search = () => {
 
@@ -49,9 +45,6 @@ const Search = () => {
 
   }
 
-
-
-
   return (
     <div >
       
@@ -67,8 +60,6 @@ const Search = () => {
 
         />
       </div>
-
-
       <div>
         {/* populating page with individual clinics based on filtered results */}
         <Grid container sx={{ gridRowGap: '6vh', }}>
@@ -77,11 +68,7 @@ const Search = () => {
           })}
 
         </Grid>
-
       </div>
-
-
-
     </div>
   );
 };

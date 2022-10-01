@@ -42,7 +42,7 @@ burger-menu-outer-container {
   justify-content: space-around;
   align-items: center;
   transition: 0.2s;
-  z-index: 999;
+  z-index: 99999;
   margin-top:2vh;
 
 }
