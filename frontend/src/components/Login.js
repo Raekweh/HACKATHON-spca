@@ -198,8 +198,6 @@ function Login({ isLoggedIn, setLogin }) {
                         handleClose();
                         handleRegClose();
 
-
-
                         // if (user != null) {
 
 
