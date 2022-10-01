@@ -21,7 +21,8 @@
 <h2>Challenges</h2>
 <ul>
   <li>Connecting React chat engine</li>
-  <li>API connection</li>  
+  <li>API connection</li>
+  <li>Responsive functionality</li>
 </ul>
 
 <h2>App instructions</h2>
@@ -34,7 +35,8 @@
 <li>You will be re-directed to the messaging page. The functionality for this page is incomplete</li>
 
 <h2>Team</h2>
-<h3>Team name: S.P.C.A (Software Programming Cult Association</h3>
+<h3>Team name</h3>
+<h4>S.P.C.A (Software Programming Cult Association)</h4>
 <h3>Members</h3>
 <ul>
   <li>Pulin Angurala</li>
