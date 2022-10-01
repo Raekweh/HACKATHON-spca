@@ -23,6 +23,7 @@
   <li>Connecting React chat engine</li>
   <li>API connection</li>
   <li>Responsive functionality</li>
+  <li>Conditional functionality with login</li>
 </ul>
 
 <h2>App instructions</h2>
@@ -36,7 +37,7 @@
 
 <h2>Team</h2>
 <h3>Team name</h3>
-<h4>S.P.C.A (Software Programming Cult Association)</h4>
+<h4> - S.P.C.A (Software Programming Cult Association)</h4>
 <h3>Members</h3>
 <ul>
   <li>Pulin Angurala</li>
