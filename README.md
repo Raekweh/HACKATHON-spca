@@ -1,4 +1,4 @@
-<h1>SPCA Project</h1>
+<h1>Petstop Application</h1>
 
 <h2>Purpose</h2>
 <p>Give pet owners the ability to consult with a veterinary clinic with non-urgent pet queries.</p>
@@ -9,3 +9,10 @@
   <li>npm i react-chat-engine --legacy-peer-deps</li>
 </ul>
 
+<h2>Tech stack</h2>
+<ul>
+  <li>React JS</li>
+  <li>Node JS</li>
+  <li>MongoDB</li>
+  <li></li>
+</ul>
