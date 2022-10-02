@@ -1,5 +1,3 @@
-
-
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -18,8 +16,6 @@ function App() {
   return (
     <div>
       <NavBar loggedIn={isLoggedIn} setLogin={setIsLoggedIn} />
-
-      {/* <BurgerMenu loggedIn={isLoggedIn} setLogin={setIsLoggedIn} /> */}
 
       <Routes>
         <Route path="/" element={<Home loggedIn={isLoggedIn} />} />
