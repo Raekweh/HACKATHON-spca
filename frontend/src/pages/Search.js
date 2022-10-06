@@ -47,8 +47,6 @@ const Search = () => {
 
   return (
     <div >
-      
-
       <div>
         <p className={'searchTitle ' + ((search(clinics).length > 0 ? 'translate' : ''))}>
           Find A Local Vet

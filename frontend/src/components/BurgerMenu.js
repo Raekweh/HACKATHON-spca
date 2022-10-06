@@ -2,6 +2,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/BurgerMenu.css";
 import { useState } from "react";
 import {Link } from "react-router-dom";
+import {signOut} from 'firebase/auth'
+import {auth} from '../firebase'
 
 export default function BurgerMenu({ loggedIn, setLogin }) {
   const [menuDisplay, setMenuDisplay] = useState(false);
@@ -48,18 +50,11 @@ export default function BurgerMenu({ loggedIn, setLogin }) {
                 onClick={(e) => {
                   setLoginFalse();
                   handleToggle();
+                  signOut(auth);
                 }}
               >
                 Logout
               </a>
-              {/* <button
-                onClick={(e) => {
-                  setLoginFalse();
-                  handleToggle();
-                }}
-              >
-                Logout
-              </button> */}
             </Link>
           </div>
         </div>
