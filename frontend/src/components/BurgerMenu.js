@@ -1,12 +1,16 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import "../styles/BurgerMenu.css";
-import { useState } from "react";
+import { useState, useContext} from "react";
 import {Link } from "react-router-dom";
 import {signOut} from 'firebase/auth'
 import {auth} from '../firebase'
+import { AuthContext } from '../context/AuthContext';
+
 
 export default function BurgerMenu({ loggedIn, setLogin }) {
   const [menuDisplay, setMenuDisplay] = useState(false);
+
+  const {currentUser} = useContext(AuthContext);
 
   function setLoginFalse() {
     setLogin(false);
@@ -21,7 +25,7 @@ export default function BurgerMenu({ loggedIn, setLogin }) {
   //Only show burger menu if logged in.
   //Add handler to logout button to change log in
   //I set it up to login also routes back home
-  if (loggedIn) {
+  if (currentUser) {
     return (
       <div className="burger-menu-outer-container">
         <div className="burger-container">

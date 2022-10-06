@@ -68,6 +68,8 @@ const handleSubmit = async (e) => {
 try  {
   await signInWithEmailAndPassword(auth, email, password)
   setLogin(true);
+  handleClose();
+  regAndLogClose();
   
   
 } catch(err){

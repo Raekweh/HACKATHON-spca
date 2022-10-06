@@ -40,6 +40,7 @@ try  {
   });
   setLogin(true);
   setRegShow(false);
+  regAndLogClose();
 
   await updateProfile(res.user, {
     displayName
